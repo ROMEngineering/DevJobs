@@ -11,21 +11,22 @@ export function Counter() {
 
   return (
     <div>
-      <div>
+      <div className="flex justify-center items-center  w-full h-screen">
         <button
-          aria-label="Increment value"
+          className="border"
           onClick={() => dispatch(increment())}
         >
           Increment
         </button>
         <span>{count}</span>
         <button
-          aria-label="Decrement value"
+          className="border"
           onClick={() => dispatch(decrement())}
         >
           Decrement
         </button>
       </div>
     </div>
-  );
+  )
 }
+export default Counter
