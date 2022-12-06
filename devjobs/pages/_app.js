@@ -11,12 +11,16 @@ import "../styles/globals.css";
 
 // creating new query client
 const queryClient = new QueryClient();
+import { store } from "../redux/store";
+import { Provider } from "react-redux";
 
 function MyApp({ Component, pageProps }) {
     return (
         <QueryClientProvider client={queryClient}>
             <ErrorBoundary>
-                <Component {...pageProps} />
+                <Provider store={store}>
+                    <Component {...pageProps} />
+                </Provider>
             </ErrorBoundary>
             <ReactQueryDevtools initialIsOpen={false} />
         </QueryClientProvider>
