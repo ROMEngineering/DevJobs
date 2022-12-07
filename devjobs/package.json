@@ -1,38 +1,41 @@
 {
-  "name": "devjobs",
-  "version": "0.1.0",
-  "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
-  "dependencies": {
-    "@tanstack/react-query": "^4.19.0",
-    "@tanstack/react-query-devtools": "^4.19.0",
-    "antd": "^4.24.2",
-    "eslint-config-prettier": "^8.5.0",
-    "next": "13.0.3",
-    "prettier": "^2.7.1",
-    "react": "18.2.0",
-    "react-dom": "18.2.0"
-  },
-  "devDependencies": {
-    "autoprefixer": "^10.4.13",
-    "eslint": "^7.32.0",
-    "eslint-config-airbnb": "^19.0.4",
-    "eslint-config-next": "13.0.3",
-    "eslint-config-prettier": "^7.2.0",
-    "eslint-plugin-import": "^2.26.0",
-    "eslint-plugin-react": "^7.31.10",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-simple-import-sort": "^7.0.0",
-    "postcss": "^8.4.19",
-    "prettier": "^2.7.1",
-    "tailwindcss": "^3.2.4"
-  },
-  "eslintConfig": {
-    "extends": "react-app"
-  }
+    "name": "devjobs",
+    "version": "0.1.0",
+    "private": true,
+    "scripts": {
+        "dev": "next dev",
+        "build": "next build",
+        "start": "next start",
+        "lint": "next lint"
+    },
+    "dependencies": {
+        "@reduxjs/toolkit": "^1.9.1",
+        "@tanstack/react-query": "^4.19.0",
+        "@tanstack/react-query-devtools": "^4.19.0",
+        "antd": "^4.24.2",
+        "eslint-config-prettier": "^8.5.0",
+        "next": "13.0.3",
+        "prettier": "^2.7.1",
+        "react": "18.2.0",
+        "react-dom": "18.2.0",
+        "react-redux": "^8.0.5"
+    },
+    "devDependencies": {
+        "autoprefixer": "^10.4.13",
+        "eslint": "^7.32.0",
+        "eslint-config-airbnb": "^19.0.4",
+        "eslint-config-next": "13.0.3",
+        "eslint-config-prettier": "^7.2.0",
+        "eslint-plugin-import": "^2.26.0",
+        "eslint-plugin-react": "^7.31.10",
+        "eslint-plugin-react-hooks": "^4.6.0",
+        "eslint-plugin-simple-import-sort": "^7.0.0",
+        "postcss": "^8.4.19",
+        "prettier": "^2.7.1",
+        "redux-devtools-extension": "^2.13.9",
+        "tailwindcss": "^3.2.4"
+    },
+    "eslintConfig": {
+        "extends": "react-app"
+    }
 }
