@@ -1,10 +1,12 @@
 import { Card } from "antd";
+import Link from "next/link";
+import { Counter } from "./counter";
 const { Meta } = Card;
 
 export default function Home() {
     return (
         <div className="h-screen flex justify-center items-center">
-            <Card
+            {/* <Card
                 hoverable
                 style={{
                     width: 240,
@@ -20,7 +22,10 @@ export default function Home() {
                     title="Antd and Tailwind Configuration test"
                     description="www.babalar.com"
                 />
-            </Card>
+            </Card> */}
+            <Link href={"/jobs"}>
+                <div>click here to go jobs page</div>
+            </Link>
         </div>
     );
 }
