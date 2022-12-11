@@ -2,6 +2,7 @@ import React, { Suspense, useEffect, useState } from "react";
 import Link from "next/link";
 import { useQuery } from "@tanstack/react-query";
 import { fetchAllJobs } from "../../requestFunctions/fetchAllJobs";
+import SingleJobCard from "../../commonComponents/SingleJobCard";
 
 const Jobs = () => {
     const { data } = useQuery({
@@ -15,19 +16,16 @@ const Jobs = () => {
             <div className="grid grid-cols-3 h-screen justify-center items-center space-4 space-x-4 w-full ">
                 {data?.map((job) => (
                     <Link href={"/jobs/" + job.id} key={job.id}>
-                        <div className=" job-card border border-gray bg-gray-400 w-full p-12">
-                            <div className="logo">
-                            <img src={job.logo} alt="logo" />
-                            </div>
-                            <div className="card_header flex gap-2">
-                                <p className="posted_time">{job.postedAt}</p>
-                                <p className="contract">{job.contract}</p>
-                            </div>
-                             <h3>{job.position}</h3>
-                             <p>{job.company}</p>
-                             <p>{job.location}</p>
-                            {/* {JSON.stringify({ job }, 2, null)} */}
-                        </div>
+                        <SingleJobCard
+                            cardItems={{
+                                logo: job.logo,
+                                postedAt: job.postedAt,
+                                contract: job.contract,
+                                position: job.position,
+                                company: job.company,
+                                location: job.location,
+                            }}
+                        />
                     </Link>
                 ))}
             </div>
