@@ -16,16 +16,7 @@ const Jobs = () => {
             <div className="grid grid-cols-3 h-screen justify-center items-center space-4 space-x-4 w-full ">
                 {data?.map((job) => (
                     <Link href={"/jobs/" + job.id} key={job.id}>
-                        <SingleJobCard
-                            cardItems={{
-                                logo: job.logo,
-                                postedAt: job.postedAt,
-                                contract: job.contract,
-                                position: job.position,
-                                company: job.company,
-                                location: job.location,
-                            }}
-                        />
+                        <SingleJobCard jobData={job} />
                     </Link>
                 ))}
             </div>
