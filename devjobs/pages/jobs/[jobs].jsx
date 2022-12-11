@@ -1,9 +1,9 @@
-import { useGetFetchQuery } from "../../commonComponents/useGetFetchQuery";
+import { useFetchCachedQuery } from "../../commonComponents/useFetchCachedQuery";
 import { useRouter } from 'next/router';
 import { findDeepNestedValue } from "../../utilityFunctions/findDeepNestedValue";
 
 const Jobs = () => {
-    const allJobs = useGetFetchQuery(["jobs"])
+    const allJobs = useFetchCachedQuery(["jobs"])
     const router = useRouter();
 
     const { jobs: id } = router?.query;
