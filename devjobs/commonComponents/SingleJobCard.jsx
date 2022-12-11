@@ -1,10 +1,8 @@
 import React from "react";
 import { Card } from "antd"; 
 
-const SingleJobCard = ({jobData, ...rest}) => {
-
-    const {logo, postedAt, contract, position, company, location} = jobData;
-
+const SingleJobCard = ({logo, postedAt, contract, position, company, location}) => {
+    
     return (
         <div className="site-card-border-less-wrapper">
             <Card

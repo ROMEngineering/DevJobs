@@ -16,7 +16,7 @@ const Jobs = () => {
             <div className="grid grid-cols-3 h-screen justify-center items-center space-4 space-x-4 w-full ">
                 {data?.map((job) => (
                     <Link href={"/jobs/" + job.id} key={job.id}>
-                        <SingleJobCard jobData={job} />
+                        <SingleJobCard {...job} />
                     </Link>
                 ))}
             </div>
