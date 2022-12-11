@@ -11,7 +11,7 @@ const Jobs = () => {
     
     return (
         <div className="flex flex-col">
-            <p>{JSON.stringify(selectedJob)}</p>
+         <p>{JSON.stringify(selectedJob) }</p>
         </div>
     );
 };
