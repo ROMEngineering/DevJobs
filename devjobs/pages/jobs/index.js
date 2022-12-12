@@ -1,8 +1,9 @@
-import React, { Suspense, useEffect, useState } from "react";
-import Link from "next/link";
+import React, { lazy, Suspense } from "react";
 import { useQuery } from "@tanstack/react-query";
 import { fetchAllJobs } from "../../requestFunctions/fetchAllJobs";
-import SingleJobCard from "../../commonComponents/SingleJobCard";
+import Loading from "../../commonComponents/Loading";
+
+const AllJobCards = lazy(() => import("../../commonComponents/AllJobCards"));
 
 const Jobs = () => {
     const { data } = useQuery({
@@ -12,13 +13,9 @@ const Jobs = () => {
     });
 
     return (
-        <Suspense fallback={<div>Loading...</div>}>
+        <Suspense fallback={<Loading />}>
             <div className="grid grid-cols-3 h-screen justify-center items-center space-4 space-x-4 w-full ">
-                {data?.map((job) => (
-                    <Link href={"/jobs/" + job.id} key={job.id}>
-                        <SingleJobCard {...job} />
-                    </Link>
-                ))}
+                <AllJobCards allData={data} />
             </div>
         </Suspense>
     );
