@@ -1,4 +1,4 @@
-import { useFetchCachedQuery } from "../../commonComponents/useFetchCachedQuery";
+import {useFetchCachedQuery} from "../../utilityHooks/useFetchCachedQuery"
 import { useRouter } from 'next/router';
 import { findDeepNestedValue } from "../../utilityFunctions/findDeepNestedValue";
 

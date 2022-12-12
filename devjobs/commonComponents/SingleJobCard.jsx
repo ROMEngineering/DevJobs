@@ -25,6 +25,7 @@ const SingleJobCard = ({logo, postedAt, contract, position, company, location}) 
             </Card>
         </div>
     );
+    
 };
 
 export default SingleJobCard;
