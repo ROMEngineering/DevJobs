@@ -1,12 +1,11 @@
 import React from "react";
-import { Card } from "antd";
+import { Card } from "antd"; 
 
-const SingleJobCard = (Props) => {
-  const {logo, postedAt, contract, position, company, location} = Props.cardItems
+const SingleJobCard = ({logo, postedAt, contract, position, company, location}) => {
+    
     return (
         <div className="site-card-border-less-wrapper">
             <Card
-                //   title="Card title"
                 bordered={true}
                 style={{
                     width: 350,
