@@ -2,3 +2,8 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.ant-switch-handle::before {
+background-color : blue
+}
