@@ -4,12 +4,13 @@ import {
     decrement,
     increment,
     incrementByAmount,
-    selectCounter,
-} from "../../redux/counter/counterSlice";
+} from "../../redux/counterPageSlice/counterSlice";
+import { getCountValue } from "../../redux/counterPageSlice/counterSelectors";
 
 export default function Counter() {
-    const count = useSelector(selectCounter);
+    const count = useSelector(getCountValue);
     const dispatch = useDispatch();
+
     const [amount, setAmount] = useState(3);
 
     return (
@@ -42,7 +43,7 @@ export default function Counter() {
                 <br />
                 <button
                     className="border"
-                    onClick={() => dispatch(incrementByAmount(amount))}
+                    onClick={() => dispatch(incrementByAmount(Number(amount)))}
                 >
                     Increment by Amount
                 </button>
