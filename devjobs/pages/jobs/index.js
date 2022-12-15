@@ -16,14 +16,11 @@ const Jobs = () => {
     return (
         <Suspense fallback={<Loading />}>
             <>
-            <GeneralHeader/>
-       
-            <div className="grid grid-cols-3 h-screen justify-center items-center space-4 space-x-4 w-full ">
-               
-                <AllJobCards allData={data} />
-            </div>
+                <GeneralHeader />
 
-            
+                <div className="grid grid-cols-3 h-screen justify-center items-center space-4 space-x-4 w-full ">
+                    <AllJobCards allData={data} />
+                </div>
             </>
         </Suspense>
     );
