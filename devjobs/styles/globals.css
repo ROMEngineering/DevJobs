@@ -7,3 +7,11 @@
 .ant-switch-handle::before {
 background-color : blue
 }
+
+.ant-checkbox-inner {
+height : 24px!important ;
+width : 24px!important;
+margin-bottom: 2px!important
+
+
+}
