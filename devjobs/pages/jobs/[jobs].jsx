@@ -15,8 +15,6 @@ const Jobs = () => {
     const { jobs: id } = router?.query;
     const selectedJob = findDeepNestedValue(allJobs ?? [], "id", Number(id));
 
-    console.log(selectedJob && selectedJob);
-
     return (
         <Layout>
             <GeneralHeader />
