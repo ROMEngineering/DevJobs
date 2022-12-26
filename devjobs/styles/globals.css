@@ -1,17 +1,20 @@
-@import 'antd/dist/antd.css';
+@import "antd/dist/antd.css";
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
-.ant-switch-handle::before {
-background-color : blue
+.ant-checkbox-inner {
+    background-color: lightgrey;
 }
 
-.ant-checkbox-inner {
-height : 24px!important ;
-width : 24px!important;
-margin-bottom: 2px!important
+.ant-switch-handle::before {
+    background-color: #5964e0;
+}
 
+.ant-checkbox-wrapper {
+    text-align: center;
+}
 
+.ant-checkbox {
+    top: 0;
 }
