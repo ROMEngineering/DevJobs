@@ -9,7 +9,7 @@ const GeneralHeader = () => {
         console.log(`switch to ${checked}`);
     };
     return (
-        <div className="bg-general-header bg-no-repeat bg-center bg-cover h-36 flex items-center justify-around   rounded-bl-full">
+        <div className="bg-general-header bg-no-repeat bg-center bg-cover h-36 flex items-center justify-around rounded-bl-full">
             <div className="devjobs-logo mr-48 ">
                 <p className="font-bold text-white italic text-2xl">devjobs</p>
             </div>

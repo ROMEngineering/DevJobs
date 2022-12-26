@@ -21,8 +21,8 @@ const ContentHeader = ({ data }) => {
                         <p className="font-bold text-xl">{company}</p>
                         <p className="text-gray-400">{website.slice(8)}</p>
                     </div>
-                    <div className="pl-24">
-                        <Button className="bg-slate-300 rounded-md h-12 text-center w-44 text-[#5964e0] font-semibold hover:bg-[#7d86e2] hover:text-white">
+                    <div className="pl-20">
+                        <Button className="bg-indigo-50 rounded-md h-12 text-center w-full text-[#5964e0] font-semibold hover:bg-[#7d86e2] hover:text-white">
                             <Link href={website}>Company Site</Link>
                         </Button>
                     </div>
