@@ -1,7 +1,5 @@
 import React from "react";
-import { Switch, Button } from "antd";
-import Image from "next/image";
-import Link from "antd/lib/typography/Link";
+import { Button } from "antd";
 
 const Content = ({ data }) => {
     const {
