@@ -9,18 +9,18 @@ const GeneralHeader = () => {
         console.log(`switch to ${checked}`);
     };
     return (
-        <div className="bg-general-header bg-no-repeat bg-center bg-cover h-36 flex items-center justify-around   rounded-bl-full">
+        <div className="bg-general-header bg-no-repeat bg-center bg-cover h-36 flex items-center justify-around rounded-bl-full">
             <div className="devjobs-logo mr-48 ">
                 <p className="font-bold text-white italic text-2xl">devjobs</p>
             </div>
             <div className="toggle ml-36 flex gap-2 items-center">
-                <Image src={Moon} width={20} height={20} />
+                <Image src={Sun} width={20} height={20} />
                 <Switch
                     defaultChecked
                     onChange={onChange}
                     className="bg-white color-red"
                 />
-                <Image src={Sun} width={20} height={20} />
+                <Image src={Moon} width={20} height={20} />
             </div>
         </div>
     );
