@@ -21,7 +21,7 @@ const Jobs = () => {
                 <>
                     <GeneralHeader />
                     <SearchInputs />
-                    <div className="font-fans grid grid-cols-3 h-screen grid-template-rows-auto gap-4 w-full px-60 py-8 h-auto min-h-screen mt-12">
+                    <div className="font-fans grid grid-cols-3 grid-template-rows-auto gap-4 w-full px-60 py-8 h-auto min-h-screen mt-12">
                         <AllJobCards allData={data} />
                     </div>
                 </>

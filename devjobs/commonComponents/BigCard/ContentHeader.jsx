@@ -4,19 +4,24 @@ import Image from "next/image";
 import Link from "antd/lib/typography/Link";
 
 const ContentHeader = ({ data }) => {
-    const { company, website, logo } = data;
+    const { company, website, logo, logoBackground } = data;
     return (
-        <content className="flex w-full bg-white rounded-lg rounded-tl-none ">
-            <Image
-                className="flex items-center bg-red-600 p-3 w-40 h-40 rounded-bl-lg"
-                src={logo}
-                alt={company}
-                width={50}
-                height={50}
-            />
+        <div className="flex w-full bg-white rounded-lg rounded-tl-none ">
+            <div
+                className="w-40 h-40 flex justify-center items-center"
+                style={{ backgroundColor: `${logoBackground}` }}
+            >
+                <Image
+                    className={`rounded-bl-lg p-3`}
+                    src={logo}
+                    alt={"company"}
+                    width={200}
+                    height={200}
+                />
+            </div>
 
             <div className="flex justify-items items-center">
-                <div className="flex justify-between space-x-44 mx-12">
+                <div className="flex justify-between space-x-36 mx-12">
                     <div className="flex flex-col space-y-4">
                         <p className="font-bold text-xl">{company}</p>
                         <p className="text-gray-400">{website.slice(8)}</p>
@@ -28,7 +33,7 @@ const ContentHeader = ({ data }) => {
                     </div>
                 </div>
             </div>
-        </content>
+        </div>
     );
 };
 

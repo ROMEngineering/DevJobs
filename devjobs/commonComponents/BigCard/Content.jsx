@@ -15,7 +15,7 @@ const Content = ({ data }) => {
     } = data;
 
     return (
-        <content className="flex flex-col h-auto w-full bg-white px-8 py-12 rounded-lg">
+        <div className="flex flex-col h-auto w-full bg-white px-8 py-12 rounded-lg">
             <header className="flex space-x-60 px-4 w-full">
                 <div className="flex flex-col">
                     <div className="flex text-gray-500 font-medium">
@@ -38,8 +38,10 @@ const Content = ({ data }) => {
                 <p>{requirements.content}</p>
 
                 <ul className="my-4">
-                    {requirements.items.map((item) => (
-                        <li className="list-disc ml-4 my-2 indent-6">{item}</li>
+                    {requirements.items.map((item, id) => (
+                        <li key={id} className="list-disc ml-4 my-2 indent-6">
+                            {item}
+                        </li>
                     ))}
                 </ul>
                 <h1 className="font-semibold text-lg my-6">
@@ -48,8 +50,11 @@ const Content = ({ data }) => {
                 <p>{role.content}</p>
                 <ul className="my-4">
                     {role.items.map((item, id) => (
-                        <li className=" list-none my-2">
-                            <span className="text-[#5964e0] font-semibold mr-6">
+                        <li key={id} className=" list-none my-2">
+                            <span
+                                key={id}
+                                className="text-[#5964e0] font-semibold mr-6"
+                            >
                                 {id + 1}
                             </span>
                             {item}
@@ -57,7 +62,7 @@ const Content = ({ data }) => {
                     ))}
                 </ul>
             </main>
-        </content>
+        </div>
     );
 };
 

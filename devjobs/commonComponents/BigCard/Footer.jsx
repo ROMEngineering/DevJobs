@@ -5,7 +5,7 @@ const Footer = ({ data }) => {
     const { position, company } = data;
 
     return (
-        <content className="flex w-full bg-white rounded-lg rounded-tl-none justify-center items-center align-middle pl-6">
+        <div className="flex w-full bg-white rounded-lg rounded-tl-none justify-center items-center align-middle pl-6">
             <div className="flex">
                 <div className="flex flex-col justify-center items-center my-4">
                     <h1 className="font-semibold text-xl py-2">{position}</h1>
@@ -19,7 +19,7 @@ const Footer = ({ data }) => {
                     </Button>
                 </div>
             </div>
-        </content>
+        </div>
     );
 };
 
