@@ -19,7 +19,7 @@ const Jobs = () => {
         <Layout>
             <GeneralHeader />
 
-            <div className="mx-auto -mt-16 w-1/2 space-y-12 mb-12">
+            <div className="mx-auto -mt-8 w-1/2 space-y-12 mb-12">
                 <ContentHeader data={selectedJob} />
                 <Content data={selectedJob} />
             </div>

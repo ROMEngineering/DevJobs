@@ -1,7 +1,5 @@
 import React from "react";
-import { Switch, Button } from "antd";
-import Image from "next/image";
-import Link from "antd/lib/typography/Link";
+import { Button } from "antd";
 
 const Content = ({ data }) => {
     const {
@@ -27,7 +25,7 @@ const Content = ({ data }) => {
                     <h1 className="font-semibold text-3xl py-2">{position}</h1>
                     <p className="font-bold text-[#5964e0]">{location}</p>
                 </div>
-                <Button className="bg-[#5964e0] rounded-md mr-5 h-12 mt-6 text-center align-middle w-44 text-white hover:bg-[#7d86e2] hover:text-white">
+                <Button className="bg-[#5964e0] rounded-md !-mr-4 h-12 mt-6 text-center align-middle w-1/4 text-white hover:bg-[#7d86e2] hover:text-white">
                     Apply Now
                 </Button>
             </header>
