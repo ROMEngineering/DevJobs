@@ -1,5 +1,7 @@
 import React from "react";
 import { Button } from "antd";
+import { ArrowLeftOutlined, ArrowRightOutlined } from "@ant-design/icons";
+import { useRouter } from "next/router";
 
 const Content = ({ data }) => {
     const {
@@ -11,6 +13,7 @@ const Content = ({ data }) => {
         requirements,
         role,
     } = data;
+    const router = useRouter();
 
     return (
         <div className="flex flex-col h-auto w-full bg-white px-8 py-12 rounded-lg">
@@ -25,9 +28,21 @@ const Content = ({ data }) => {
                     <h1 className="font-semibold text-3xl py-2">{position}</h1>
                     <p className="font-bold text-[#5964e0]">{location}</p>
                 </div>
-                <Button className="bg-[#5964e0] rounded-md !-mr-4 h-12 mt-6 text-center align-middle w-1/4 text-white hover:bg-[#7d86e2] hover:text-white">
-                    Apply Now
-                </Button>
+                <div className="buttons  flex  items-center gap-5">
+                    <Button
+                        className="bg-[#5964e0] rounded-md p-2 h-10  text-center align-middle w-32 text-white hover:bg-[#7d86e2] hover:text-white flex justify-center items-center"
+                        onClick={() => {
+                            router.push("http://localhost:3000/jobs");
+                        }}
+                    >
+                        <ArrowLeftOutlined />
+                        Back To Home
+                    </Button>
+                    <Button className="bg-[#5964e0] rounded-md p-2 h-10  text-center align-middle w-32 text-white hover:bg-[#7d86e2] hover:text-white flex justify-center items-center">
+                        Apply Now
+                        <ArrowRightOutlined />
+                    </Button>
+                </div>
             </header>
 
             <main className="m-4 text-gray-400 text-base">
