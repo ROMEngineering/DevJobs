@@ -11,6 +11,7 @@ const SearchInputs = ({
     return (
         <div className="font-sans px-60 h-14 w-full -mt-8 rounded-md flex items-center justify-center">
             <Input
+                bordered = {true}
                 onChange={handleTitleChange}
                 size="large"
                 placeholder="Filter by title..."
@@ -18,8 +19,8 @@ const SearchInputs = ({
                     <Image
                         src="/assets/desktop/icon-search.svg"
                         alt="icon"
-                        width={15}
-                        height={15}
+                        width={20}
+                        height={20}
                     />
                 }
                 className="h-full gap-1 rounded-md"
