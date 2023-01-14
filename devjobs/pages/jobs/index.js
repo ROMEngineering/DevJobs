@@ -5,6 +5,7 @@ import Loading from "../../commonComponents/Loading";
 import Layout from "../../commonComponents/Layout";
 import GeneralHeader from "../../commonComponents/GeneralHeader";
 import SearchInputs from "../../commonComponents/SearchInputs";
+import { Button } from "antd";
 
 const AllJobCards = lazy(() => import("../../commonComponents/AllJobCards"));
 
@@ -32,6 +33,7 @@ const Jobs = () => {
     });
 
     const [filteredData, setFilteredData] = useState(data);
+    const [visible, setVisible] = useState(9);
     const [state, dispatch] = useReducer(reducer, {
         jobTitle: "",
         jobLocation: "",
@@ -74,8 +76,18 @@ const Jobs = () => {
                 <>
                     <GeneralHeader />
                     <SearchInputs {...filteringEventHandlers} />
-                    <div className="font-fans grid grid-cols-3 grid-template-rows-auto gap-4 w-full px-60 py-8 h-auto min-h-screen mt-12">
-                        <AllJobCards allData={filteredData} />
+                    <div className=" font-fans grid grid-cols-3 grid-template-rows-auto gap-4 w-full px-60 py-8 h-auto min-h-screen mt-12">
+                        <AllJobCards allData={filteredData} visible={visible} />
+                    </div>
+                    <div className=" flex w-full justify-center mb-5 p-2">
+                        <button
+                            className="rounded-md bg-[#5964e0] h-8 text-center w-52 text-white hover:bg-[#7d86e2] hover:text-white border border-[#5964e0] hover:border-white"
+                            onClick={() => {
+                                setVisible((prev) => prev + 6);
+                            }}
+                        >
+                            Load More
+                        </button>
                     </div>
                 </>
             </Suspense>
