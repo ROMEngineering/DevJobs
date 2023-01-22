@@ -19,7 +19,7 @@ const SingleJobCard = ({
              */}
             <Card
                 bordered={true}
-                className="max-w-full h-full p-0 rounded-md"
+                className="max-w-full max-h-[200px] h-full p-0 rounded-md"
                 bodyStyle={{ margin: 0, height: "100%", padding: 20 }}
             >
                 <div
