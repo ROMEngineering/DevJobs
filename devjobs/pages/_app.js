@@ -6,6 +6,7 @@ import { store } from "../redux/store";
 import { Provider } from "react-redux";
 import { Suspense } from "react";
 import Loading from "../commonComponents/Loading";
+import { ThemeProvider } from "next-themes";
 
 // creating new query client
 const queryClient = new QueryClient({
@@ -22,7 +23,9 @@ function MyApp({ Component, pageProps }) {
             <Suspense fallback={<Loading />}>
                 <ErrorBoundary>
                     <Provider store={store}>
-                        <Component {...pageProps} />
+                        <ThemeProvider attribute="class">
+                            <Component {...pageProps} />
+                        </ThemeProvider>
                     </Provider>
                 </ErrorBoundary>
             </Suspense>
