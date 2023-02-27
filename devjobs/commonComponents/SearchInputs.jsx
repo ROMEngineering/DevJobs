@@ -11,7 +11,7 @@ const SearchInputs = ({
     return (
         <div className="font-sans px-60 h-14 w-full -mt-8 rounded-md flex items-center justify-center">
             <Input
-                bordered = {true}
+                bordered={true}
                 onChange={handleTitleChange}
                 size="large"
                 placeholder="Filter by title..."
@@ -23,7 +23,7 @@ const SearchInputs = ({
                         height={20}
                     />
                 }
-                className="h-full gap-1 rounded-md"
+                className="h-full gap-1 rounded-md dark:bg-slate-400"
             />
             <Input
                 onChange={handleLocationChange}
@@ -37,17 +37,17 @@ const SearchInputs = ({
                         height={15}
                     />
                 }
-                className="h-full gap-1 rounded-md"
+                className="h-full gap-1 rounded-md dark:bg-slate-400"
             />
             <Checkbox
                 onChange={handleContractTypeChange}
-                className="rounded-md gap-1 h-full flex: 1 1 auto items-center pl-6 pr-6 w-2/3 bg-white border border-slate-300"
+                className="rounded-md gap-1 h-full flex: 1 1 auto items-center pl-6 pr-6 w-2/3 bg-white border border-slate-300 dark:bg-slate-400"
             >
                 Full Time Only
             </Checkbox>
             <Button
                 onClick={handleFilter}
-                className="rounded-md bg-[#5964e0] h-full text-center w-52 text-white hover:bg-[#7d86e2] hover:text-white border border-[#5964e0] hover:border-white"
+                className="rounded-md bg-[#5964e0] dark:bg-slate-600 h-full text-center w-52 text-white hover:bg-[#7d86e2] hover:text-white border border-[#5964e0] hover:border-white"
             >
                 Search
             </Button>

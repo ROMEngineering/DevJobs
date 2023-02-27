@@ -23,7 +23,9 @@ const ContentHeader = ({ data }) => {
                     </div>
                     <div className="">
                         <Button className="bg-indigo-50 rounded-md h-12 text-center w-full text-[#5964e0] font-semibold hover:bg-[#7d86e2] hover:text-white">
-                            <Link href={website}>Company Site</Link>
+                            <Link legacyBehavior href={website}>
+                                Company Site
+                            </Link>
                         </Button>
                     </div>
                 </div>
