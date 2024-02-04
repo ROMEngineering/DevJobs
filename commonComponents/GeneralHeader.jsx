@@ -1,8 +1,8 @@
 import React from "react";
-import { Switch } from "antd";
-import Image from "next/image";
-import Moon from "/public/assets/desktop/icon-moon.svg";
-import Sun from "/public/assets/desktop/icon-sun.svg";
+// import { Switch } from "antd";
+// import Image from "next/image";
+// import Moon from "/public/assets/desktop/icon-moon.svg";
+// import Sun from "/public/assets/desktop/icon-sun.svg";
 
 const GeneralHeader = () => {
     const onChange = (checked) => {
@@ -13,7 +13,7 @@ const GeneralHeader = () => {
             <div className="devjobs-logo mr-48 ">
                 <p className="font-bold text-white italic text-2xl">devjobs</p>
             </div>
-            <div className="toggle ml-36 flex gap-2 items-center">
+            {/* <div className="toggle ml-36 flex gap-2 items-center">
                 <Image src={Sun} width={20} height={20} alt={"Moon"} />
                 <Switch
                     defaultChecked
@@ -21,7 +21,7 @@ const GeneralHeader = () => {
                     className="bg-white color-red"
                 />
                 <Image src={Moon} width={20} height={20} alt={"sun"} />
-            </div>
+            </div> */}
         </div>
     );
 };
